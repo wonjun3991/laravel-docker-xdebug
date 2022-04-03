@@ -10,9 +10,10 @@ class HelloController extends Controller
 {
     public function __invoke(): JsonResponse
     {
-        ExampleJob::dispatch();
+        $value = ['test1234','test12345'];
+        $value2 = $value;
 
         return response()
-            ->json(['message' => 'Hello World']);
+            ->json(['message' => 'Hello World','value' => $value2]);
     }
 }

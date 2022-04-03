@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Models\TestCase;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -23,7 +24,7 @@ class ExampleJob implements ShouldQueue
      */
     public function __construct()
     {
-        //
+
     }
 
     /**
@@ -33,6 +34,6 @@ class ExampleJob implements ShouldQueue
      */
     public function handle()
     {
-        echo 'excute Jobs';
+        TestCase::create();
     }
 }
